@@ -1,0 +1,25 @@
+---
+server:
+  port: 8080
+  contextPath: /cusr
+ 
+jackson:
+    serialization:
+    FAIL_ON_EMPTY_BEANS: false 
+      
+spring:
+profiles: local,default
+datasource:
+  sampleapp:
+    url: jdbc:mysql://localhost:3306/cusr
+    username: root
+    password: abcd
+    driverClassName: com.mysql.jdbc.Driver
+    defaultSchema:
+    maxPoolSize: 20
+    hibernate:
+      hbm2ddl.method: update
+      show_sql: true
+      format_sql: true
+      dialect: org.hibernate.dialect.MySQLDialect
+
